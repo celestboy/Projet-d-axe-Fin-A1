@@ -1,0 +1,48 @@
+main {
+  width: 100%;
+  margin: auto;
+  margin-top: 5vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+
+header {
+  margin-top: 200px;
+  text-align: center;
+}
+
+header h3 {
+  font-size: max(3vw, 20px);
+  margin-bottom: 0.5vw;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+header p {
+  font-size: max(1.5vw, 15px);
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+}
+
+
+
+#delete_cards_button {
+  text-align: center;
+  margin: max(50px, 2vw) auto;
+  display: block;
+  width: 15vw;
+  min-width: 180px;
+  height: 4vw;
+  min-height: 40px;
+  font-size: max(15px, 1.2vw);
+  background-color: #ed6f6f;
+  transition: 0.1s;
+}
+#delete_cards_button:hover {
+  background-color: #e03939;
+}
+
+@media screen and (max-width: 400px) {
+  .owned_cards_divs {
+    margin: max(30px, 2vw) 15px;
+  }
+}

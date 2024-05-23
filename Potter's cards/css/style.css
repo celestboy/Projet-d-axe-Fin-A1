@@ -1,0 +1,251 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --main-bc: rgb(250, 248, 248);
+  --text1-color: brown;
+  --text2-color: rgb(239, 222, 69);
+  --text3-color: rgb(60, 35, 255);
+  --text4-color: rgb(95, 75, 255);
+
+  --footer-bc: rgba(123, 119, 119, 0.8);
+}
+
+button {
+  cursor: pointer;
+}
+
+/* DEBUT NAVBAR */
+
+nav {
+  background-color: rgba(186, 186, 200, 0.8);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px;
+  font-size: calc(0.5rem + 1.5vw);
+  position: fixed;
+  top: 30px;
+  left: 50%;
+  transform: translate(-50%);
+  width: 60%;
+  border-radius: 1vw;
+  font-family: "karla";
+}
+ul {
+  display: flex;
+  justify-content: space-around;
+  width: 90%;
+}
+li {
+  list-style-type: none;
+}
+a {
+  color: var(--text1-color);
+  text-decoration: none;
+  transition: 0.3s;
+}
+a:hover {
+  color: rgb(255, 79, 79);
+  font-weight: bold;
+}
+#icons {
+  cursor: pointer;
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%);
+  color: var(--text4-color);
+}
+
+@media (max-width: 650px) {
+  #icons {
+    display: block;
+  }
+  #icons:before {
+    content: "\2630";
+  }
+
+  .active #icons:before {
+    content: "\2715";
+  }
+
+  nav {
+    background-color: transparent;
+  }
+
+  nav ul {
+    position: fixed;
+    left: -150%;
+    top: 5%;
+    flex-direction: column;
+    background-color: var(--main-bc);
+    width: 100%;
+    text-align: center;
+    transition: 0.3s;
+  }
+  nav li {
+    padding: 3px 0;
+  }
+  nav li:hover {
+    background-color: wheat;
+  }
+
+  nav.active ul {
+    left: 0;
+  }
+}
+
+/* FIN NAVBAR */
+
+
+/* DESIGN CARTES */
+
+
+.design_cards_divs {
+    width: 18vw;
+    height: 25vw;
+    background-color: rgba(178, 178, 196, 0.85);
+    margin: max(50px, 2vw) 10px;
+    border-radius: 4px;
+    background-size: cover;
+}
+
+.design_cards_link {
+    width: 18vw;
+    height: 25vw;
+    font-size: max(12px, 1.3vw);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+@media screen and (max-width: 500px) {
+    .design_cards_divs {
+      width: 70%;
+      height: 280px;
+      margin: 5vw auto;
+    }
+}
+
+
+/* FIN DESIGN CARTES */
+
+/* DEBUT OPTION DE TRADE */
+
+/* Icon Trade */
+
+#icon-trade {
+  position: fixed;
+  bottom: 100px;
+  right: 4vw;
+  width: max(4.5vw, 40px);
+  padding: 0.5vw;
+  border-radius: 10px;
+  transition: 0.2s;
+  cursor: pointer;
+} #icon-trade:hover {background-color: var(--text1-color); opacity: 0.85;;}
+
+/* Fin Icon Trade */
+
+/* Fenêtre de trade */
+
+
+#trade-window {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 50vw;
+  background-color: rgba(163, 220, 255, 0.95);
+  border-radius: 5px;
+  border: 1.5px solid rgb(31, 51, 181);
+  transform: translate(-50%, -50%);
+  text-align: center;
+  display: none;
+  padding: 1vw;
+}
+
+#trade-window h2 {
+  font-size: max(2.5vw, 20px);
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+#trade-window h3 {
+  font-size: max(1.8vw, 20px);
+  margin: 2vw 0 3vw 0;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#trade-window form label {
+  font-size: max(1.3vw, 15px);
+  display: block;
+  margin-top: 20px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#trade-window input {
+  text-align: center;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 550;
+  margin-top: 10px;
+
+  max-width: 80%;
+  padding: 1vw;
+  background-color: rgb(148, 160, 239);
+  border: 1px solid blue;
+  border-radius: 5px;
+}
+
+#trade-window button {
+  font-family: "Ubuntu";
+  font-size: max(0.7vw, 15px);
+  margin: 20px auto;
+  border-radius: 3px;
+  padding: 1vw 1.5vw;
+  transition: 0.3s;
+} #trade-window button:hover {border-radius: 7px; font-size: larger;}
+
+#trade-window-validate {
+  background-color: rgb(107, 126, 247);
+  border: 1.5px solid rgb(148, 160, 239);
+} #trade-window-validate:hover {background-color: rgb(63, 83, 214)}
+
+#trade-window-close {
+  background-color: #cd6d6d;
+  border: 1.5px solid rgb(173, 61, 67);
+} #trade-window-close:hover {background-color: rgb(198, 52, 60)}
+
+
+
+@media screen and (max-width: 800px) {
+  #trade-window {
+    width: 80%
+  }
+}
+
+
+/* Fin fenêtre de trade */
+
+/* FIN OPTION DE TRADE */
+
+
+
+/* FOOTER */
+
+footer {
+  width: 100%;
+  text-align: center;
+  margin: auto;
+  bottom: 0;
+  height: 4vw;
+  min-height: 40px;
+  background-color: var(--footer-bc);
+  border-top: 2px solid black;
+}
+footer p {
+  top: 0;
+  transform: translate(0, 50%);
+  font-size: max(10px, 1.3vw);
+  font-family: "Kanit";
+}

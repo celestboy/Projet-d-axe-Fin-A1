@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/logo.jpg">
+
+    <title>Potter's cards - connexion</title>
+
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit&family=Karla&family=Protest+Riot&display=swap" rel="stylesheet">
+
+
+</head>
+<body>
+
+    <img src="images/index-wallpaper.jpg" alt="fond d'écran de la page d'inscription avec l'école Poudlard">
+
+    <h1>Potter's Cards - Connexion / inscription</h1>
+
+    <div id="btn_div">
+        <button id="btn_connexion">Connexion</button>
+        <button id="btn_inscription">Inscription</button>
+
+
+        <form id="connexion_form" onsubmit="return false">
+            <label for="email_connexion" class="labels">Votre adresse mail :</label>
+            <input type="email" id="email_connexion" class="inputs" required>
+
+            <label for="password_connexion" class="labels">Votre mot de passe :</label>
+            <input type="password" id="password_connexion" class="inputs" required>
+
+            <input type="submit" id="connexion_submit" class="btn_submit">
+
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" id="connexion_return" class="btn_return"><path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg>
+        </form>
+
+        <form id="inscription_form" onsubmit="return false">
+            <label for="email_inscription" class="labels">Votre adresse mail :</label>
+            <input type="email" id="email_inscription" class="inputs" required>
+
+            <label for="pseudo_inscription" class="labels">Votre pseudonyme :</label>
+            <input type="text" id="pseudo_inscription" class="inputs" required>
+
+            <label for="password_inscription" class="labels">Votre mot de passe :</label>
+            <input type="password" id="password_inscription" class="inputs" required>
+
+            <input type="submit" id="inscription_submit" class="btn_submit">
+
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" id="inscription_return" class="btn_return"><path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg>
+        </form>
+    </div>
+
+
+
+    <footer>
+        <p>Potter's Cards - tous droits réservés</p>
+    </footer>
+
+    <script src="js/index.js"></script>
+    
+</body>
+</html>
