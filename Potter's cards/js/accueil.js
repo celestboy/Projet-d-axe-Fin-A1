@@ -4,13 +4,13 @@ const userId = localStorage.userId;
 let boostersDispo = 0;
 let deck = [];
 
-boostersDispoSpan.textContent = boostersDispo;
-if (!localStorage.getItem("lastOpening")) {
-  boostersDispo = 1;
-  boostersDispoSpan.textContent = "1";
-} else {
-  boostersDispoSpan.textContent = "0";
-}
+
+// if (!localStorage.getItem("lastOpening")) {
+//   boostersDispo = 1;
+//   boostersDispoSpan.textContent = "1";
+// } else {
+//   boostersDispoSpan.textContent = "0";
+// }
 
 function openBoosterBtnActivated() {
   if (boostersDispo == 0 || !boostersDispo) {
@@ -42,12 +42,14 @@ async function timeLeftFunction() {
     const seconds = Math.floor((timeLeft % (60 * 1000)) / 1000);
 
     openBoosterBtnActivated();
+    boostersDispo = 0
 
     document.getElementById(
       "time-left-p"
     ).textContent = `Temps restant : ${hours} heures, ${minutes} minutes, ${seconds} secondes.`;
   }
 
+  boostersDispoSpan.textContent = boostersDispo;  
   setTimeout(timeLeftFunction, 1000);
 }
 timeLeftFunction();
